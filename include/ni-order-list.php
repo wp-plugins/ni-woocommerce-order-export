@@ -110,6 +110,7 @@ if( !class_exists( 'ni_order_list' ) ) {
 		}
 		function get_order_grid()
 		{
+			$order_total = 0;
 			$order_data = $this->get_order_data();
 			
 			//$this->print_data ($order_data);
@@ -124,19 +125,21 @@ if( !class_exists( 'ni_order_list' ) ) {
                 </form>
                 </div>
 				<div class="data-table">
-				<table >
+				<table>
 					<tr>
 						<th>#ID</th>
 						<th>Order Date</th>
 						<th>Billing First Name</th> 
 						<th>Billing Email</th> 
 						<th>Billing Country</th> 
-						<th>Order Status</th>
+						<th>Status</th>
+                        <th>Order Currency</th>
 						<th>Order Total</th>
 					</tr>
 				
 				<?php
 				foreach($order_data as $k => $v){
+					$order_total += isset($v->order_total)?$v->order_total:0;
 				?>
 					<tr>
 						<td> <?php echo $v->order_id;?> </td>
@@ -144,11 +147,15 @@ if( !class_exists( 'ni_order_list' ) ) {
 						<td> <?php echo $v->billing_first_name;?> </td>
 						<td> <?php echo $v->billing_email;?> </td>
 						<td> <?php echo $this->get_country_name($v->billing_country);?> </td>
-						 <td> <?php echo ucfirst ( str_replace("wc-","", $v->order_status));?> </td>
-						<td> <?php echo $v->order_total;?> </td>
+                       	<td> <?php echo ucfirst ( str_replace("wc-","", $v->order_status));?> </td>
+                        <td> <?php echo $v->order_currency;?> </td>
+						<td style="text-align:right"> <?php echo woocommerce_price($v->order_total);?> </td>
 					</tr>	
 				<?php }?>
 				</table>
+                <div style="text-align:right; margin-top:10px">
+                	<?php  echo woocommerce_price($order_total); ?>
+                </div>
 				<?php
 				
 				//$this->print_data(	$order_data );

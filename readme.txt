@@ -3,16 +3,19 @@ Contributors: Anzar Ahmed
 Tags:Tags: woocommerce, order, export xls,export csv, woocommerce order, woocommerce order export, woocommerce sales, today sales, order sales, order export plugin, sales report cart, daily sales, weekly sales, monthly sales, yearly sales  
 Requires at least: 4.1.1
 Tested up to: 4.2.2
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Ni Woocommerce Order Export help top keep the track of daily, weekly, monthly and yearly sales report. It provides the list of order details.
-You can export billing address and email address.
+Ni Woocommerce Order Export help top keep the track of daily, weekly, monthly yearly sales report and export the billing email address and billing name. 
+
 == Description ==
 
-Ni Woocommerce Order Export help top keep the track of daily, weekly, monthly and yearly sales report. It provides the list of order details. It provide the total sales, total customer, daily sales and daily customer.
-You can export billing address and email address.
+* Ni Woocommerce Order Export help top keep the track of daily, weekly, monthly and yearly sales report. 
+* It provides the list of order details. 
+* It provide the total sales, total customer, daily sales and daily customer.
+* You can export billing address and email address.
+* Filter the report by date range
 
 Some Features.
 
@@ -60,6 +63,14 @@ Yes, we can add the filter on customer name, billing email and order number etc.
 
 
 == Changelog ==
+
+= version 1.1 =
+* Fixed:  Woocommerce Price Format
+* Added:  Order Total
+* Added:  Currency Columns
+* Tested: Compatible With WordPress 4.2.2
+* Tested: Compatible With WordPress 2.3.10
+
 
 = version 1.0 =
 * Initial relese

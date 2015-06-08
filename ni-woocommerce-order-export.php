@@ -1,9 +1,9 @@
 <?php 
 /*
 Plugin Name: Ni Woocommerce Order Export
-Description: Ni Woocommerce Sales Report help top keep the track of daily, weekly, monthly and yearly sales report. You can export billing address and email address.
+Description: Ni Woocommerce Order Export help top keep the track of daily, weekly, monthly, yearly sales report with date range filter option and export functionality.
 Author: Anzar Ahmed
-Version: 1.0
+Version: 1.1
 Author URI: http://mywebdesire.com/
 License: GPLv2
 */
