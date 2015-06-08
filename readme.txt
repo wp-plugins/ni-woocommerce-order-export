@@ -69,7 +69,7 @@ Yes, we can add the filter on customer name, billing email and order number etc.
 * Added:  Order Total
 * Added:  Currency Columns
 * Tested: Compatible With WordPress 4.2.2
-* Tested: Compatible With WordPress 2.3.10
+* Tested: Compatible With Woocommerce 2.3.10
 
 
 = version 1.0 =
