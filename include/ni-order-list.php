@@ -121,6 +121,7 @@ if( !class_exists( 'ni_order_list' ) ) {
                 <div style="text-align:right;margin-bottom:10px">
                 <form id="ni_frm_order_export" action="" method="post">
                     <input type="submit" value="Excel" name="btn_excel_export" id="btn_excel_export" />
+                    <input type="submit" value="Print" name="btn_print" id="btn_print" />
                     <input type="hidden" name="select_order" value="<?php echo $this->get_request("select_order");  ?>" />
                 </form>
                 </div>
@@ -196,6 +197,27 @@ if( !class_exists( 'ni_order_list' ) ) {
 			endforeach;
 			$this->ExportToCsv($file_name ,$export_rows,$columns,$file_format); 
 			//die;
+		}
+		function get_print_content(){
+		?>
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+			<html xmlns="http://www.w3.org/1999/xhtml">
+			<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>Print</title>
+			<link rel='stylesheet' id='sales-report-style-css'  href='<?php echo  plugins_url( '../assets/css/ni-order-export-style.css', __FILE__ ); ?>' type='text/css' media='all' />
+			</head>
+			
+			<body>
+				<?php 
+					$this->get_order_grid();
+				?>
+			  <div class="print_hide" style="text-align:right; margin-top:15px"><input type="button" value="Back" onClick="window.history.go(-1)"> <input type="button" value="Print this page" onClick="window.print()">	</div>
+			 
+			</body>
+			</html>
+
+		<?php
 		}
 	}
 }

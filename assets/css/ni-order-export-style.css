@@ -71,3 +71,18 @@ font-size:25px;
 
 	font-size:20px;
 }
+
+/*Hide Print Item*/
+@media print{ 
+	.print_hide { display:none;}
+	
+	.change_status{
+		color:#000;
+		cursor:auto;
+	}
+	
+	.data-table th.action_column, .data-table td.action_column{
+		display:none;
+	}
+
+}

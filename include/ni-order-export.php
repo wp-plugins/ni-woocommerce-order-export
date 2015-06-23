@@ -73,6 +73,12 @@ if( !class_exists( 'ni_order_export' ) ) {
 				$obj->ni_order_export($FileName,"xls");
 				die;
 			}	
+			if(isset($_REQUEST['btn_print'])){
+				include_once("ni-order-list.php");
+				$obj = new ni_order_list();
+				$obj->get_print_content();
+				die;
+			}	
 		}
 	}
 }

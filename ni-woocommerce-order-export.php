@@ -3,7 +3,7 @@
 Plugin Name: Ni Woocommerce Order Export
 Description: Ni Woocommerce Order Export help top keep the track of daily, weekly, monthly, yearly sales report with date range filter option and export functionality.
 Author: Anzar Ahmed
-Version: 1.1
+Version: 1.2
 Author URI: http://mywebdesire.com/
 License: GPLv2
 */
